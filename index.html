@@ -1,47 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity Water Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    header {
+      background: #fff;
+      width: 100%;
+      padding: 16px 0;
+      text-align: left;
+    }
+    header img {
+      height: 32px;
+      margin-left: 32px;
+    }
+    .hero {
+      position: relative;
+      text-align: left; /* align text to left */
+      color: #fff;
+    }
+    .hero-img {
+      width: 100%;
+      height: 80vh; /* tall hero image */
+      object-fit: cover;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 5%; /* push overlay content toward left */
+      transform: translateY(-50%);
+      text-align: left;
+      max-width: 600px;
+    }
+    .hero-overlay h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      color: #FFC907; /* brand yellow */
+    }
+    .hero-overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .cta-btn {
+      background: #0077b6;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta-btn:hover {
+      background: #0096c7;
+    }
+    .story, .impact-story, .call-to-action {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left; /* align sections left */
+    }
+    .impact-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* align content left */
+      gap: 20px;
+    }
+    .impact-content img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    @media(min-width: 700px) {
+      .impact-content {
+        flex-direction: row;
+        text-align: left;
+      }
+      .impact-content p {
+        flex: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <!-- Solid white header with logo -->
+  <header>
+    <img src="img/cw_logo-2.png" alt="charity: water logo">
+  </header>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Your Contribution Comes With Receipts</h1>
+      <p>Every dollar you give funds clean water, and we have the proof.</p>
+      <a href="#" class="cta-btn">See your impact</a>
+    </div>
+    <img src="img/cropped.png" alt="Hero background" class="hero-img">
+  </section>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+  <!-- Story Section -->
+  <section class="story">
+    <div class="story-content">
+      <h2>Our Story</h2>
+      <p>
+        We believe that access to clean water is a human right. Our mission
+        is to build sustainable water projects in communities that need them most.
+      </p>
+    </div>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- Impact Story Section -->
+  <section class="impact-story">
+    <h2>Real Impact: Meet Amina</h2>
+    <div class="impact-content">
+      <img 
+        src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" 
+        alt="Amina smiling with clean water" 
+        class="impact-image"
+      />
+      <p>
+        Amina used to walk miles every day to collect water for her family.
+        Thanks to your support, her village now has a clean water well.
+        Amina can go to school and her family is healthier and happier.
+      </p>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="call-to-action">
+    <h2>Ready to Change Lives?</h2>
+    <p>Your support helps save lives. Every donation brings us closer to a world with clean water for all.</p>
+    <a href="#" class="cta-btn">Donate Now</a>
+  </section>
 </body>
 </html>
