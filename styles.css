@@ -1,33 +1,27 @@
-/* Removed stray/duplicate hero and hero-img definitions at top of file */
-/*
-  Media queries help your site look good on all devices.
-  They let you change styles for different screen sizes, like phones and computers.
-*/
-
-/* For screens 700px wide or less (most phones) */
+/* Responsive Media Queries */
 @media (max-width: 700px) {
   .hero-img {
     width: 100%;
-    height: 65vh; /* taller hero image on mobile */
+    height: 70vh; /* make hero taller for smaller screens */
     object-fit: cover;
     display: block;
-    margin: 0 auto;
   }
-  .hero-content {
+  .hero-overlay {
+    top: 20%; /* move text closer to the top */
+    left: 16%;
+    padding: 0 12px;
+  }
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+ .hero-overlay {
   position: absolute;
+  top: 20 px;   /* Move text closer to the top */
+  left: 16px;
+  max-width: 600px;
   z-index: 2;
-  text-align: left;
-  color: #fff;
-  top: 0;
-  left: 56px;
-  transform: none;
-  padding: 0 10px;
-  }
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
+}
   }
   .cta-btn {
     font-size: 1rem;
@@ -38,25 +32,23 @@
     text-align: left;
     gap: 12px;
   }
-}
 
-/* For screens wider than 700px (tablets and desktops) */
 @media (min-width: 701px) {
   .hero-img {
     width: 100%;
-    max-height: 600px; /* taller hero image on desktop */
+    height: 95vh; /* taller hero on desktop */
     object-fit: cover;
-    margin-bottom: 0;
   }
-  .hero-content {
-    text-align: left; /* align text to the right */
-    padding: 0 40px;
+  .hero-overlay {
+    top: 80px; /* keep text higher */
+    left: 56px;
   }
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .hero-overlay h1 {
+    font-size: 3rem;
+    margin-top:  -270px;
   }
-  .hero-content p {
-    font-size: 1.2rem;
+  .hero-overlay p {
+    font-size: 1.3rem;
   }
   .story-content {
     flex-direction: row;
@@ -65,7 +57,7 @@
   }
 }
 
-/* Charity: Water Brand Colors */
+/* Brand Colors */
 :root {
   --charcoal: #222326;
   --yellow: #FFC907;
@@ -78,16 +70,15 @@
   --pink: #F16061;
 }
 
-/* Global Styles */
+/* Global */
 html, body {
   background-color: var(--charcoal);
   color: #f5f5f5;
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Headings */
 h1, h2 {
   color: var(--yellow);
   font-weight: 700;
@@ -95,15 +86,11 @@ h1, h2 {
   text-align: left;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
-  height: 95vh; /* taller hero section */
+  height: 95vh;
   background: url('full-image.png') no-repeat center center/cover;
-  display: flex;
-  justify-content: flex-end; /* push content to the right */
-  align-items: center;
-  text-align: left;
   border-radius: 0 0 16px 16px;
 }
 
@@ -111,15 +98,15 @@ h1, h2 {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* add overlay for better text contrast */
 }
 
 .hero-overlay {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  max-width: 700px;
-  padding: 0 56px;
-  text-align: left; /* ensure overlay text is right-aligned */
+  position: absolute;
+  top: 80px;
+  left: 56px;
+  max-width: 600px;
+  z-index: 2;
 }
 
 .hero-overlay h1 {
@@ -134,13 +121,12 @@ h1, h2 {
   color: #f5f5f5;
 }
 
-/* Call-to-Action Button */
+/* CTA */
 .cta-btn, .donate-button {
   display: inline-block;
   background-color: var(--yellow);
   color: var(--charcoal);
   padding: 14px 32px;
-  border: none;
   border-radius: 6px;
   font-weight: bold;
   font-size: 1.1em;
@@ -157,84 +143,51 @@ h1, h2 {
   transform: translateY(-2px) scale(1.04);
 }
 
-/* Story Section */
+/* Story */
 .story {
   background: transparent;
   border-top: 4px solid var(--yellow);
   border-bottom: 4px solid var(--blue);
-  padding: 72px 56px;
-  text-align: left;
+  padding: 36px 28px;
+  text-align: center;
 }
 
 .story-content {
   max-width: 700px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
+   display: flex;
+   flex-direction: column;
   gap: 24px;
   align-items: center;
-  color: #f5f5f5;
 }
 
 .story-img {
   width: 180px;
   border-radius: 10px;
-  background: var(--green);
 }
 
 .story-content h2 {
-  color: var(--yellow);
-  margin-bottom: 10px;
+  margin-bottom: -8px;
 }
 
 .story-content p {
-  color: #f5f5f5;
   font-size: 1.1rem;
-}
-
-/* Impact Image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-/* Call-to-Action Section */
-.call-to-action {
-  background: transparent;
-  color: var(--yellow);
   text-align: center;
-  padding: 96px 56px;
 }
 
-.call-to-action h2 {
-  color: var(--yellow);
-  margin-bottom: 18px;
-}
-
-.call-to-action p {
-  color: #f5f5f5;
-}
-
-/* Responsive Design */
-@media (max-width: 700px) {
-  .story-content {
-    flex-direction: column;
-    text-align: left;
-  }
-  .story-img {
-    width: 100px;
-    margin-bottom: 12px;
-  }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-}
+/* Impact */
+.impact-image {
+  width: 50%;
+ .story-content {
+   flex-direction: column;
+   text-align: left;
+   gap: 24px;
+    max-width: 90px;
+ .impact-content {
+   flex-direction: column;
+   text-align: left;
+   gap: 28px;
+ }
 
 @media (min-width: 701px) {
   .impact-content {
@@ -243,10 +196,31 @@ h1, h2 {
     justify-content: center;
     gap: 28px;
     text-align: left;
-    max-width: 800px;
+    max-width: 100px;
     margin: 0 auto 72px auto;
   }
   .impact-image {
     width: 300px;
   }
+}
+
+/* Call to Action */
+    width: 90px;
+  background: transparent;
+  color: var(--yellow);
+  text-align: center;
+  padding: 96px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.call-to-action h2 {
+  margin-bottom: 18px;
+}
+
+.call-to-action p {
+  color: #f5f5f5;
 }

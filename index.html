@@ -9,7 +9,7 @@
     header {
       background: #fff;
       width: 100%;
-      padding: 16px 0;
+      padding: 0 px 0;
       text-align: left;
     }
     header img {
@@ -53,7 +53,8 @@
       font-weight: bold;
     }
     .cta-btn:hover {
-      background: #0096c7;
+      background: #FFC907; /* brand yellow */
+      color: #222326; /* dark charcoal for contrast */
     }
     .story, .impact-story, .call-to-action {
       padding: 60px 20px;
@@ -92,7 +93,7 @@
   <section class="hero">
     <div class="hero-overlay">
       <h1>Your Contribution Comes With Receipts</h1>
-      <p>Every dollar you give funds clean water, and we have the proof.</p>
+  <p style="line-height: 1.1;">Every dollar you give<br>funds clean water,<br>and we have the proof.</p>
       <a href="#" class="cta-btn">See your impact</a>
     </div>
     <img src="img/cropped.png" alt="Hero background" class="hero-img">
@@ -101,36 +102,50 @@
   <!-- Story Section -->
   <section class="story">
     <div class="story-content">
-      <h2>Our Story</h2>
+      <h2>Our Mission</h2>
       <p>
-        We believe that access to clean water is a human right. Our mission
-        is to build sustainable water projects in communities that need them most.
+        We strive to make clean water a reality for everyone. We fund sustainable water projects and give full transparency so you can see the difference you make.
       </p>
     </div>
   </section>
 
   <!-- Impact Story Section -->
   <section class="impact-story">
-    <h2>Real Impact: Meet Amina</h2>
+    <h2>Water Changes Everything</h2>
     <div class="impact-content">
-      <img 
-        src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" 
-        alt="Amina smiling with clean water" 
-        class="impact-image"
-      />
+        <img
+          src="img/Helen.png"
+          alt="Community members with water containers"
+          class="impact-image"
+        />
       <p>
-        Amina used to walk miles every day to collect water for her family.
-        Thanks to your support, her village now has a clean water well.
-        Amina can go to school and her family is healthier and happier.
+      Helen used to spend hours every day walking long distances to collect water, leaving little time for herself or her family. Now, with a hand pump in her village, everything has changed. She runs a small business, farms crops, and watches her grandchildren go to school. Clean water has given Helen health, confidence, and the freedom to build a brighter future.
       </p>
     </div>
   </section>
 
   <!-- Call-to-Action Section -->
   <section class="call-to-action">
-    <h2>Ready to Change Lives?</h2>
-    <p>Your support helps save lives. Every donation brings us closer to a world with clean water for all.</p>
-    <a href="#" class="cta-btn">Donate Now</a>
+    <h2>Turn on the tap for someone in need.</h2>
+    <p>100% of public donations go directly to fund clean water projects.</p>
+  <a href="#" class="cta-btn">Donate Now</a>
   </section>
+</body>
+<footer style="background-color:#222326; padding:40px 20px; text-align:center; font-family:Arial, sans-serif; color:#FFC907;">
+  <!-- Logo / Branding -->
+  <div style="margin-bottom:20px;">
+    <img src="img/cw_logo.png" alt="cw_logo" style="height:50px;">
+  </div>
+  <!-- Navigation Links -->
+  <div style="margin-bottom:20px;">
+  <a href="#about" style="margin:0 15px; color:#2E9DF7; text-decoration:none;">About</a>
+  <a href="#services" style="margin:0 15px; color:#2E9DF7; text-decoration:none;">Services</a>
+  <a href="#blog" style="margin:0 15px; color:#2E9DF7; text-decoration:none;">Blog</a>
+  <a href="#contact" style="margin:0 15px; color:#2E9DF7; text-decoration:none;">Contact</a>
+  <a href="#donate" style="margin:0 15px; color:#2E9DF7; text-decoration:none; font-weight:bold;">Donate</a>
+  </div>
+
+  </div>
+</footer>
 </body>
 </html>
